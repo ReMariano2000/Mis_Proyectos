@@ -1,3 +1,5 @@
+# *Trabajo Final Capstone: Google Data Analytics* 
+
 ## **Paso 1: Selección de Datasets**
 Elegimos los datasets con los que vamos a trabajar. Basándonos en el tipo de información útil para el análisis, utilizaremos los siguientes:
 
@@ -670,7 +672,7 @@ Realizare el mismo trabajo con todas las tablas.
 
 ### **Analisis de Correlación**
 
-# *ACLARACION* Todo el analisis teorico se encuentra en el informe en formato PDF que se encuentra adjunto en: 
+#### *ACLARACION* Todo el analisis teorico se encuentra en el informe en formato PDF que se encuentra adjunto en: 
 
 Realizamos la primer visualizacion de las correlaciones planteadas en las preguntas de investigacion, para eso utilizaremos RStudio (Cloud Version): 
 
