@@ -672,7 +672,11 @@ Realizare el mismo trabajo con todas las tablas.
 
 ### **Analisis de Correlación**
 
-#### *ACLARACION* Todo el analisis teorico se encuentra en el informe en formato PDF que se encuentra adjunto en: 
+#### *ACLARACION* 
+
+Todo el analisis teorico se encuentra en el *informe* en formato PDF que se encuentra adjunto en: 
+
+[📄 Descargar el informe en PDF](https://github.com/ReMariano2000/Mis_Proyectos/blob/main/Trabajo_Final_Capstone.pdf) 
 
 Realizamos la primer visualizacion de las correlaciones planteadas en las preguntas de investigacion, para eso utilizaremos RStudio (Cloud Version): 
 
