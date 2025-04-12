@@ -676,7 +676,7 @@ Realizare el mismo trabajo con todas las tablas.
 
 Todo el analisis teorico se encuentra en el *informe* en formato PDF que se encuentra adjunto en: 
 
-[📄 Descargar el informe en PDF](https://github.com/ReMariano2000/Mis_Proyectos/blob/main/Google%20Data%20Analytics%20Proyecto%20Final.pdf) 
+[📄 Descargar el informe en PDF](https://github.com/ReMariano2000/Trabajo-Final-Google-Certificate/blob/main/Reporte%20Google%20Data%20Analytics%20Proyecto%20Final.pdf) 
 
 Realizamos la primer visualizacion de las correlaciones planteadas en las preguntas de investigacion, para eso utilizaremos RStudio (Cloud Version): 
 
