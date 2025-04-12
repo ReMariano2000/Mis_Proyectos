@@ -715,9 +715,46 @@ Obtenemos los siguientes graficos con sus respectivas visualizaciones:
 
 [![Grafico-4-Barra-Actividad.png](https://i.postimg.cc/4yHqLDzT/Grafico-4-Barra-Actividad.png)](https://postimg.cc/sGyT106n) 
 
+Como RStudio no cuenta con una funcion para generar graficos de torta (geom_pie) el mismo fue obtenido a traves del siguiente comando:
+
+```r
+library(ggplot2)
+library(dplyr)
+
+# Agrupamos por nivel de actividad y calculamos porcentaje
+actividad_resumen <- Tabla_3 %>%
+  group_by(Nivel_de_Actividad) %>%
+  summarise(Cantidad = n()) %>%
+  mutate(Porcentaje = round((Cantidad / sum(Cantidad)) * 100, 1),
+         Etiqueta = paste0(Porcentaje, "%"))
+
+# Gráfico de torta con porcentajes
+ggplot(actividad_resumen, aes(x = "", y = Cantidad, fill = Nivel_de_Actividad)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y") +
+  geom_text(aes(label = Etiqueta), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", size = 5) +
+  labs(
+    title = "Distribución de Niveles de Actividad (Gráfico de Torta)",
+    fill = "Nivel de Actividad"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank()
+  )
+
+```
+Esta funcion convierte un grafico de barra en circular usando el eje "Y" como angulo de rotación obteniendo lo siguiente: 
+
 ### **Graficos de Torta** 
 
 [![Grafico-5-Torta-Nivel-de-Actividad.png](https://i.postimg.cc/TPNvwq0h/Grafico-5-Torta-Nivel-de-Actividad.png)](https://postimg.cc/HJMhvMfC) 
+
+---
 
 ### **Graficos de Linea** 
 
