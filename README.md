@@ -670,6 +670,8 @@ Realizare el mismo trabajo con todas las tablas.
 
 ### **Analisis de Correlación**
 
+# *ACLARACION* Todo el analisis teorico se encuentra en el informe en formato PDF que se encuentra adjunto en: 
+
 Realizamos la primer visualizacion de las correlaciones planteadas en las preguntas de investigacion, para eso utilizaremos RStudio (Cloud Version): 
 
 ```r
@@ -698,7 +700,7 @@ cor3 <- round(cor(Tabla_2$Promedio_Distancia, Tabla_2$Promedio_Calorias_Quemadas
 ```
 --- 
 
-Obtenemos los siguientes graficos con sus respectivas visualizaciones:
+Aplicando formulas del mismo orden obtenemos los siguientes graficos con sus respectivas visualizaciones:
 
 **Grafico 1**
 [![grafico-pasos-calorias.png](https://i.postimg.cc/RZ7xbWm6/grafico-pasos-calorias.png)](https://postimg.cc/qNvFNMz4)
@@ -711,9 +713,29 @@ Obtenemos los siguientes graficos con sus respectivas visualizaciones:
 
 ---
 
+Posteriormente realizamos un grafico de barra para representar los distintos nivel de actividad con la siguiente formula:
+
+```r
+library(ggplot2)
+
+ggplot(Tabla_3, aes(x = Nivel_de_Actividad, fill = Nivel_de_Actividad)) +  #Fill lo utilizamos para rellenar automaticamente cada barra con un color en particular
+  geom_bar() +
+  labs(
+    title = "Distribución de Niveles de Actividad",
+    x = "Nivel de Actividad",
+    y = "Cantidad de Usuarios"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+
+```
+Obtenemos la siguiente distribucion: 
+
 ### **Graficos de Barra** 
 
 [![Grafico-4-Barra-Actividad.png](https://i.postimg.cc/4yHqLDzT/Grafico-4-Barra-Actividad.png)](https://postimg.cc/sGyT106n) 
+
+---
 
 Como RStudio no cuenta con una funcion para generar graficos de torta (geom_pie) el mismo fue obtenido a traves del siguiente comando:
 
